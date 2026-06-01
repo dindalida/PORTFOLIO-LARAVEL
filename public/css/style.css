@@ -1,0 +1,33 @@
+/* Inti dari sistem Slide */
+body {
+    margin: 0;
+    overflow: hidden; /* INI KUNCINYA: Mematikan scroll */
+    background-color: #050505;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.slide-wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out; /* Animasi perpindahan */
+    z-index: 1;
+}
+
+/* Saat menu diklik, seksi yang aktif akan muncul */
+section.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
